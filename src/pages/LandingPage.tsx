@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { WaitingListForm } from '@/components/WaitingListForm'
 import { Truck, Users, Shield, Clock } from 'lucide-react'
 
-const Index = () => {
+const LandingPage = () => {
   return (
     <div className='min-h-screen bg-background'>
       {/* Header */}
@@ -114,4 +114,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default LandingPage
