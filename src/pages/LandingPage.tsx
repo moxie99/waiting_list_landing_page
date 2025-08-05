@@ -18,7 +18,6 @@ import {
   MessageCircle,
   Sparkles,
 } from 'lucide-react'
-import haulageAppMockup from '../assets/app.png'
 import { logo, mockup } from '@/assets'
 const LandingPage = () => {
   const containerVariants = {
