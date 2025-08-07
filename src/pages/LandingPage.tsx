@@ -96,7 +96,6 @@ const LandingPage = () => {
           >
             <motion.div
               className='relative'
-              animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
             >
               <div
@@ -115,7 +114,7 @@ const LandingPage = () => {
               />
             </motion.div>
           </motion.div>
-          <Link to='/auth'>
+          {/* <Link to='/auth'>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant='secondary'
@@ -131,7 +130,7 @@ const LandingPage = () => {
                 Admin Login
               </Button>
             </motion.div>
-          </Link>
+          </Link> */}
         </nav>
       </motion.header>
 
@@ -174,7 +173,7 @@ const LandingPage = () => {
 
           <motion.h2
             variants={itemVariants}
-            className='text-6xl md:text-7xl font-bold mb-8 text-white leading-tight'
+            className='text-6xl md:text-7xl font-bold mb-8 leading-tight'
             style={{
               background:
                 'linear-gradient(135deg, #ffffff 0%, hsla(48, 96%, 50%, 0.9) 100%)',
@@ -186,7 +185,7 @@ const LandingPage = () => {
             On-Demand Hauling
             <br />
             <motion.span
-              className='relative inline-block'
+              className='relative inline-block z-10'
               animate={{
                 textShadow: [
                   '0 0 20px hsla(48, 96%, 50%, 0.5)',
@@ -195,11 +194,15 @@ const LandingPage = () => {
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
-              style={{ color: 'hsl(48, 96%, 50%)' }}
+              style={{
+                color: 'hsl(48, 96%, 50%)',
+                WebkitTextFillColor: 'hsl(48, 96%, 50%)', // Override parent's transparent
+                background: 'none', // Remove any background inheritance
+              }}
             >
               Made Simple
               <motion.div
-                className='absolute -inset-2 rounded-lg opacity-30'
+                className='absolute -inset-2 rounded-lg opacity-30 pointer-events-none -z-10'
                 style={{
                   background:
                     'linear-gradient(45deg, hsla(48, 96%, 50%, 0.1), hsla(194, 70%, 25%, 0.1))',
@@ -905,8 +908,8 @@ const LandingPage = () => {
               {
                 icon: Phone,
                 title: 'Call Us',
-                desc: '+2348059231979',
-                action: 'tel:1-800-428-5371',
+                desc: '+23481-612-48486',
+                action: 'tel:23481-612-48486',
               },
               {
                 icon: Mail,
@@ -984,20 +987,23 @@ const LandingPage = () => {
             className='text-center'
           >
             <div className='flex items-center justify-center space-x-2 mb-4'>
-              <Truck
-                className='h-8 w-8'
-                style={{ color: 'hsl(48, 96%, 50%)' }}
+              <img
+                src={logo}
+                className='h-10 w-30 text-white relative z-10'
+                style={{
+                  filter: 'drop-shadow(0 0 8px hsla(48, 96%, 50%, 0.6))',
+                }}
               />
-              <h2
+              {/* <h2
                 className='text-2xl font-bold text-white'
                 style={{
                   textShadow: '0 0 20px hsla(48, 96%, 50%, 0.3)',
                 }}
               >
                 Hauler
-              </h2>
+              </h2> */}
             </div>
-            <p className='text-white/80 mb-6'>Your loads on demand.</p>
+            {/* <p className='text-white/80 mb-6'>Your loads on demand.</p> */}
             <p className='text-white/60'>
               &copy; 2025 Hauler. All rights reserved.
             </p>
