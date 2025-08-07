@@ -913,8 +913,8 @@ const LandingPage = () => {
               {
                 icon: Mail,
                 title: 'Email Us',
-                desc: 'ileolagold.olalekan@gmail.com',
-                action: 'mailto:ileolagold.olalekan@gmail.com',
+                desc: 'haulerng2025@gmail.com',
+                action: 'mailto:haulerng2025@gmail.com',
               },
               {
                 icon: MessageCircle,
