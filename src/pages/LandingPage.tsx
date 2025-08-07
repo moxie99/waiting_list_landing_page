@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { WaitingListForm } from '@/components/WaitingListForm'
 import { motion } from 'framer-motion'
